@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css here -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>COVID-19 INDIA</title>
+</head>
+
+<body onload="start()" class="text-capitalize">
+    <!-- navbar here -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a href="/index.html" class="navbar-brand">COVID-19 INDIA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav ml-auto mr-0">
+                <li class="nav-item active">
+                    <a href="/index.html" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                    <!-- <a href="/prevention.html" class="nav-link">prevention</a> -->
+                    <a href="#" class="nav-link">prevention</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="/arogyasetu.html" class="nav-link">Arogyasetu</a>
+                </li> -->
+                <li class="nav-item">
+                    <!-- <a href="/about.html" class="nav-link">about</a> -->
+                    <a href="#" class="nav-link">about</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="middle">
+        <select class="select-form" aria-label="Default select example" id="dropDownStates" onchange="onStateChange()">
+        </select>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-between">
+        <div class="left">
+            <!-- cards -->
+            <div class="card-container">
+                <div class="card" id="cases-border">
+                    <div class="card-body">
+                        <h5>Total cases</h5>
+                        <h2 id="total-todays"></h2>
+                        <h6 class="card-text" id="total-cases"></h6>
+                    </div>
+                </div>
+                <div class="card" id="recovered-border">
+                    <div class="card-body recovered">
+                        <h5>recovered</h5>
+                        <h2 id="recovered-todays"></h2>
+                        <h6 class="card-text" id="recovered"></h6>
+                    </div>
+                </div>
+                <div class="card" id="deaths-border">
+                    <div class="card-body">
+                        <h5>deaths</h5>
+                        <h2 id="deaths-todays"></h2>
+                        <p class="card-text" id="deaths"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- map -->
+            <div id="map"></div>
+
+        </div>
+
+        <div class="right">
+            <!--states table-->
+            <div class="card-container">
+                <div class="card card-table w-100 ml-auto mr-0">
+                    <div class="card-body">
+                        <table class="table state-table" id="state-table">
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- chart -->
+            <!-- <div class="card-container">
+                <div class="card w-100 ml-auto mr-0">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-md">
+            <div class="resources">
+                <h4>Resource</h4>
+                <a href="#">Data</a>
+            </div>
+            <div class="address">
+                <h4>Address</h4>
+                <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Indore (M.P), India</p>
+                <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> Call: +918889690365 <a href="tel: +918889690365"></a></p>
+                <p><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> Email: kaadarsh511@gmail.com <a href="mailto: kaadarsh511@gmail.com"></a></p>
+            </div>
+            <div class="country d-none d-md-block">
+                <img src="./img/india.png" alt="" width="150px" height="150px" class="img img-fluid">
+            </div>
+        </div>
+    </footer>
+
+    <!-- js here -->
+    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

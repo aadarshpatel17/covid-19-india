@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* navbar */
+.navbar-nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left,
+.right {
+    margin-top: 20px;
+}
+.left {
+    width: 60%;
+}
+.right {
+    position: relative;
+    width: 38%;
+    height: 68vh;
+}
+/* middle */
+.middle {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+.select-form {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 5px;
+    outline: none;
+}
+.form-control {
+    background-color: white;
+    color: rgb(70, 70, 70);
+}
+
+/* left-right */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    width: 100%;
+    box-shadow: 5px 5px 10px 1px rgb(241, 241, 241);
+    cursor: pointer;
+}
+.card:not(:last-child) {
+    margin-right: 1rem;
+}
+.card-body,
+.card-title {
+    color: rgb(70, 70, 70);
+}
+.card-text {
+    font-size: 13px;
+}
+#total-todays,
+#deaths-todays {
+    color: rgb(245, 40, 13);
+}
+#recovered-todays {
+    color: rgb(0, 179, 0);
+}
+.card-table {
+    position: absolute;
+    overflow: scroll;
+    height: 100%;
+    min-width: 200px;
+}
+.state-table tr:nth-of-type(odd) {
+    background-color: #f3f2f8;
+}
+.state-table tr:first-child{
+    cursor: pointer;
+}
+.state-table td {
+    border: none;
+}
+.state-table td .todays-recovered,
+.state-table td .todays-cases {
+    color: rgb(245, 40, 13);
+    font-size: 10px;
+    font-weight: bold;
+}
+.state-table td .todays-recovered {
+    color: rgb(0, 202, 0);
+}
+.fa {
+    cursor: pointer;
+}
+
+/* map */
+#map {
+    height: 500px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0,5);
+}
+.map .leftlet-container {
+    height: 100%;
+}
+footer {
+    background-color: rgb(197, 222, 255);
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    text-transform: none;
+    color: rgb(70, 70, 70);
+}
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+footer > div > div > h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+footer > div > div > p,
+footer > div > div > a {
+    font-size: 14px;
+}
+
+/* chart */
+/* .chartjs-size-monitor {
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1;
+} */
+
+@media only screen and (max-width: 760px) {
+    .navbar-nav {
+        width: 100%;
+    }
+    .nav-item:hover {
+        background-color: rgb(59, 59, 255);
+    }
+
+    .right,
+    .left {
+        width: 100%;
+    }
+    .container-fluid {
+        flex-direction: column;
+    }
+
+    .middle {
+        width: 100%;
+        padding: 1.5rem;
+    }
+    .select-form {
+        width: 100%;
+    }
+
+}
